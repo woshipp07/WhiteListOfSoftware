@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 焦点 -->
+    <item android:state_focused="true"><shape android:shape="rectangle">
+
+            <!-- 填充颜色 -->
+
+            <solid android:color="#FFFFFF" />
+
+            <!-- 线的宽度，颜色 -->
+
+            <stroke android:width="0.9dp" android:color="#3195F3" />
+
+            <!-- 矩形的圆角半径 -->
+
+            <corners android:radius="5dp" />
+        </shape></item>
+    <!-- 点击 -->
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+
+            <!-- 填充颜色 -->
+
+            <solid android:color="#FFFFFF" />
+
+            <!-- 线的宽度，颜色灰色 -->
+
+            <stroke android:width="0.9dp" android:color="#3195F3" />
+
+            <!-- 矩形的圆角半径 -->
+
+            <corners android:radius="5dp" />
+        </shape></item>
+    <!-- 代码选中 -->
+    <item android:state_selected="true"><shape android:shape="rectangle">
+
+            <!-- 填充颜色 -->
+
+            <solid android:color="#3160F9" />
+
+            <!-- 线的宽度，颜色 -->
+
+            <stroke android:width="0.9dp" android:color="#3195F3" />
+
+            <!-- 矩形的圆角半径 -->
+
+            <corners android:radius="5dp"/>
+        </shape></item>
+        
+     <item android:state_enabled="false">
+            <shape android:shape="rectangle">
+
+            <!-- 填充颜色 -->
+
+            <solid android:color="#FFFFFF" />
+
+            <!-- 线的宽度，颜色 -->
+
+            <stroke android:width="0.9dp" android:color="#d3d3d3" />
+
+            <!-- 矩形的圆角半径 -->
+
+            <corners android:radius="5dp" />
+        </shape>
+            </item>
+    
+    <!-- 默认 -->
+    <item><shape android:shape="rectangle">
+
+            <!-- 填充颜色 -->
+
+            <solid android:color="#FFFFFF" />
+
+            <!-- 线的宽度，颜色 -->
+
+            <stroke android:width="0.9dp" android:color="#d3d3d3" />
+
+            <!-- 矩形的圆角半径 -->
+
+            <corners android:radius="5dp" />
+        </shape></item>
+       
+
+</selector>

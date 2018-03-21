@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" 
+    >
+
+    <include
+         android:id="@+id/title"
+         layout="@layout/activity_titile" 
+     />
+         <View
+            android:id="@+id/vv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/title" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vv"
+            android:orientation="vertical"
+            android:padding="10dp" >
+            <View
+                android:id="@+id/v0"
+                android:layout_width="0dp"
+                android:layout_height="140dp"/>
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_selector"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="导入存储卡中的apk包名"
+                android:layout_below="@+id/v0"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/btn_1" />
+
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v1"
+                android:background="@drawable/btn_main_selector"
+                android:gravity="center"
+                android:text="导入已安装应用的apk包名"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+		
+        </RelativeLayout>
+</RelativeLayout>
