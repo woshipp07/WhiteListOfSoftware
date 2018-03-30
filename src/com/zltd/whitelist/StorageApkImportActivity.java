@@ -1,6 +1,7 @@
 package com.zltd.whitelist;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 import com.zltd.whitelist.R;
@@ -63,7 +64,7 @@ public class StorageApkImportActivity extends Activity {
         //setContentView(R.layout.activity_main);
         
         ListView mListView = (ListView) findViewById(R.id.listvew);
-		mList = new ArrayList<packageBean>();
+		//mList = new ArrayList<packageBean>();
 		//mList.addAll(AppUtils.getInstalledApps(this, true));
 		//mList =getMessageStorageApps();
 		mList =toRepeatgetMessageStorageApps();
@@ -93,7 +94,7 @@ public class StorageApkImportActivity extends Activity {
 			}
 		}
 	try {
-			wm.addPackageName(sb.toString());
+			wm.addPackageName(0,sb.toString());
 			Toast.makeText(StorageApkImportActivity.this, "导入成功", Toast.LENGTH_SHORT).show();
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
@@ -154,7 +155,7 @@ public class StorageApkImportActivity extends Activity {
 		ArrayList<packageBean>mPackageList=new ArrayList<packageBean>();
 		String packNamewhite=null;
 		try {
-			packNamewhite=wm.getPackageNameWhite();
+			packNamewhite=wm.getPackageNameWhite(0);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

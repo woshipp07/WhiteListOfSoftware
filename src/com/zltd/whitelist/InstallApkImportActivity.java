@@ -83,7 +83,7 @@ public class InstallApkImportActivity extends Activity {
 			}
 		}
 	try {
-			wm.addPackageName(sb.toString());
+			wm.addPackageName(1,sb.toString());
 			Toast.makeText(InstallApkImportActivity.this, "导入成功", Toast.LENGTH_SHORT).show();
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
@@ -100,12 +100,12 @@ public class InstallApkImportActivity extends Activity {
 		
 		ArrayList<packageBean>mPackageList=new ArrayList<packageBean>();
 		String packNamewhite=null;
-/*		try {
-			packNamewhite=wm.getPackageNameWhite();
+		try {
+			packNamewhite=wm.getPackageNameWhite(1);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*//////////////////////////////////////
+		}
 		if (packNamewhite==null) {
 			packNamewhite="";
 		}
@@ -123,7 +123,7 @@ public class InstallApkImportActivity extends Activity {
 		        		.toString();
 		    	   String pname = p.packageName;
 		    	   ComponentName mComponentName = new ComponentName(pname,pname+".receivers.BootReceiver");
-		    	   //xx就是软件名字，然后后面就是一般用来接收开机完成广播的组件名称。
+		    	   
 		    	   int a=mContext.getPackageManager().getComponentEnabledSetting(mComponentName);
 
 		    	   Drawable icon = p.applicationInfo.loadIcon(mContext.getPackageManager());
